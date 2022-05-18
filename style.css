@@ -50,5 +50,7 @@ html, body {
 
 .singleGrid {
     flex: 1;
-    border: 1px solid red;
+}
+.hover {
+    background-color: black;
 }

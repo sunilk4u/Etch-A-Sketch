@@ -12,9 +12,16 @@ function createGrid(size) {
     }
     container.appendChild(gridLine);
   }
+  changeColor();
 }
 
-createGrid(16);
+function changeColor() {
+  const singleGrids = document.querySelectorAll(".singleGrid");
+  singleGrids.forEach(
+    (singleGrid) =>
+      (singleGrid.onmouseover = () => singleGrid.classList.add("hover"))
+  );
+}
 
 function askInput() {
   let newSize = Number(
@@ -29,5 +36,7 @@ function askInput() {
   }
 }
 
+
+createGrid(16);
 const setNew = document.querySelector(".custom");
 setNew.addEventListener("click", askInput);
