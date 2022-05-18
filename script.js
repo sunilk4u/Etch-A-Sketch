@@ -36,7 +36,13 @@ function askInput() {
   }
 }
 
+function eraseSketch() {
+  const singleGrids = document.querySelectorAll(".singleGrid");
+  singleGrids.forEach((singleGrid) => singleGrid.classList.remove("hover"));
+}
 
 createGrid(16);
 const setNew = document.querySelector(".custom");
 setNew.addEventListener("click", askInput);
+const erase = document.querySelector(".erase");
+erase.addEventListener("click", eraseSketch);
